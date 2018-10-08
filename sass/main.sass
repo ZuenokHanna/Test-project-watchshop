@@ -1,0 +1,580 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+@import "bourbon"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*:focus::-webkit-input-placeholder
+	opacity: 0
+	outline: none
+	box-shadow: 0 0 0 0
+	font-size: 18px
+	color: #494949
+	background-color: #0e0e0e
+
+*:focus:-moz-placeholder
+	opacity: 0
+	outline: none
+	box-shadow: 0 0 0 0
+	font-size: 18px
+	color: #494949
+	background-color: #0e0e0e
+
+*:focus::-moz-placeholder
+	opacity: 0
+	outline: none
+	box-shadow: 0 0 0 0
+	font-size: 18px
+	color: #494949
+	background-color: #0e0e0e
+
+*:focus:-ms-input-placeholder
+	opacity: 0
+	outline: none
+	box-shadow: 0 0 0 0
+	font-size: 18px
+	color: #494949
+	background-color: #0e0e0e
+
+html, body
+	height: 100%
+body
+	font-size: 20px
+	min-width: 320px
+	position: relative
+	line-height: 1.2
+	font-family: "pt-sans-regular"
+	overflow-x: hidden
+	color: $txt
+	background-color: #000
+	box-sizing: border-box
+
+a
+	color: #fff
+	outline: none
+	text-decoration: none
+
+a:hover, a:focus,  a:active
+	color: $main
+	outline: none
+	text-decoration: none
+
+h2
+	font-size: 48px
+	color: #fff
+	font-family: "bebas-neue"
+
+p
+	margin: 0
+
+.container
+	max-width: 1430px
+.container.hd
+	width: 100%
+	max-width: 1700px
+	padding: 0
+header
+	position: fixed
+	width: 100%
+	height: 64px
+	background-color: #0e0e0e
+	color: #fff
+	top: 0
+	z-index: 1000
+	.search
+		display: inline-block
+		width: 25px
+		height: 23px
+		background-image: url(../img/icon_sprite.png)
+		background-repeat: no-repeat
+		background-position: -23px 0
+	.cart
+		margin-left: 57px
+		&__inner
+			display: inline-block
+			width: 23px
+			height: 23px
+			margin-top: 8px
+			background-image: url(../img/icon_sprite.png)
+			background-repeat: no-repeat
+			background-position: 0 0
+		&__num
+			display: inline-block
+			width: 20px
+			height: 20px
+			line-height: 20px
+			vertical-align: middle
+			border-radius: 10rem
+			text-align: center
+			background-color: $main
+			color: #fff
+			font-size: 11px
+			font-family: "pt-sans-bold"
+			margin-left: 13px
+			margin-top: -12px
+	.user
+		display: inline-block
+		width: 22px
+		height: 25px
+		background-image: url(../img/icon_sprite.png)
+		background-repeat: no-repeat
+		background-position: -48px 0
+		margin-left: 50px
+		cursor: pointer
+.ital
+	font-family: "pt-sans-italic"
+	font-size: 14px
+	vertical-align: text-top
+	line-height: 1.4
+
+.section_1
+	position: relative
+	margin-top: 64px
+	width: 100%
+	height: 830px
+	background-color: #000
+	font-family: "bebas-neue"
+	.top_nav
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		margin-top: 58px
+		.logo
+			color: #fff
+			font-size: 30px
+			text-transform: uppercase
+			line-height: 1
+			margin-right: 15px
+		.menu
+			margin-top: -2px
+			&__item
+				font-size: 18px
+				margin-right: 74px
+				&:nth-of-type(1)
+					margin-left: 4px
+				&:nth-of-type(2)
+					margin-left: 2px
+				&:nth-of-type(3)
+					margin-left: 1px
+				&:nth-of-type(4)
+					margin-left: -14px
+				&:nth-of-type(5)
+					margin-left: -5px
+			.active
+				color: $main
+				position: relative
+				&:after
+					display: block
+					position: absolute
+					content: ''
+					width: 50px
+					height: 1px
+					margin-top: -1px
+					background-color: $main
+					left: 50%;
+					transform: translateX(-50%);
+		.tel
+			font-size: 24px
+			float: right;
+			line-height: 0;
+			display: flex;
+			align-items: center;
+			margin-top: -2px;
+			span
+				display: inline-block
+				width: 25px
+				height: 24px
+				margin-top: 3px
+				background-image: url(../img/icon_sprite.png)
+				background-repeat: no-repeat
+				background-position: -73px 0
+				margin-right: 28px;
+	.owl-carousel
+		.item
+			width: 100%;
+			height: 750px;
+			background-image: url(../img/section_1_slide_1.jpg);
+			background-size: cover;
+			background-position: 0 -18px;
+			background-repeat: no-repeat
+
+.h1_wr
+	position: absolute
+	top: 170px
+	z-index: 2
+	h1
+		font-size: 82px
+		color: #fff
+
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot
+	margin-right: 18px
+	&:focus
+		outline: none
+	span
+		width: 12px
+		height: 12px
+		background-color: #5d4a41
+		display: inline-block
+		border-radius: 10rem
+.owl-dots
+	bottom: 86px
+	left: 148px
+	position: absolute;
+.owl-carousel button.owl-dot.active
+	span
+		background-color: #b6907e
+
+.main-btn
+	display: inline-block
+	width: auto
+	padding: 15px 32px
+	background-color: transparent
+	border: 1px solid #977869
+	color: #977869
+	margin-top: 36px
+	margin-left: 6px
+	font-size: 18px
+	border-radius: 0
+	letter-spacing: 1.8px
+	&:last-child
+		margin-left: 28px
+		padding: 15px 26px 15px 38px
+
+.section_2
+	height: 905px
+	.owl-carousel-2
+		.item
+			width: 100%;
+			height: 905px;
+			background-image: url(../img/section_2_slide_1.jpg);
+			background-size: cover;
+			background-position: 0 2px
+			background-repeat: no-repeat
+			&__text
+				width: 50%
+				margin-top: 52px
+				h2
+					margin-bottom: 16px
+				p
+					line-height: 1.82
+					letter-spacing: 0.38px
+					font-size: 23px
+					width: 700px
+		.owl-nav
+			position: absolute
+			top: 234px
+			left: 50%
+			.owl-prev, .owl-next
+				display: inline-block
+				width: 26px
+				height: 18px
+				background-image: url(../img/arrows_1.png);
+				background-size: cover;
+				background-position: 0 0
+				background-repeat: no-repeat
+			.owl-next
+				background-position: -27px 0
+				margin-left: 18px
+
+.section_3
+	height: 900px
+	padding-top: 80px
+	h2
+		margin-left: 3px
+	.owl-carousel-3, .owl-carousel-4
+		margin-top: 47px
+		.owl-item
+			text-align: center
+			&:nth-of-type(1)
+				padding-right: 27px
+			&:nth-of-type(3)
+				padding-left: 33px
+		.item
+			background: transparent
+			display: inline-block
+			margin: auto
+			.item_inner
+				background: transparent
+				width: 420px
+				height: 633px
+				border: 1px solid #2b2b2b
+				padding-top: 53px
+				text-align: center
+				img
+					display: inline-block
+					margin-bottom: 54px
+					width: auto
+					height: 403px
+				.title
+					font-size: 30px
+					font-family: "bebas-neue"
+					color: #fff
+					margin-bottom: 12px
+				span
+					font-size: 24px
+					font-family: "pt-sans-bold"
+					color: $main
+					letter-spacing: 1.1px
+					line-height: 1.3
+		.owl-nav
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			width: 100%
+			margin-top: 5px
+			.owl-prev, .owl-next
+				display: inline-block
+				width: 52px
+				height: 36px
+				background-image: url(../img/arrows_2.png);
+				background-size: cover;
+				background-position: 0 0
+				background-repeat: no-repeat
+				margin-left: -89px
+			.owl-next
+				float: right
+				background-position: -52px 0
+				margin-right: -89px
+
+.tab-content
+	width: 100%
+.nav-tabs
+	border-bottom: none
+	width: auto
+	justify-content: end
+.nav-tabs .nav-link
+	border: none
+	text-transform: uppercase
+	font-family: "pt-sans-bold"
+	font-size: 18px
+	padding: 0
+	margin-left: 44px
+	margin-right: 5px
+	margin-top: -14px
+	letter-spacing: 0.8px
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active
+	color: #fff
+	background-color: transparent
+	position: relative
+	background-image: linear-gradient(to top, $main 51%, transparent 49%)
+	padding: 0 2px
+.tab-content > .tab-pane
+	visibility: hidden
+	height: 0px
+	overflow:hidden
+.tab-content > .active
+	visibility: visible
+	height: auto
+	overflow: visible
+
+.section_4
+	background-color: #0e0e0e
+	height: 274px
+	.logo-wr
+		justify-content: space-between
+		div
+			&:nth-of-type(1)
+				margin-top: 3px
+			&:nth-of-type(2)
+				margin-left: -29px
+				margin-top: 4px
+			&:nth-of-type(3)
+				margin-left: -14px
+				margin-top: 4px
+			&:nth-of-type(4)
+				margin-top: 3px
+				margin-right: -4px
+
+.section_5
+	height: 720px
+	padding-top: 83px
+	.owl-carousel-5
+		margin-top: 118px
+		.owl-item:nth-of-type(2n+1)
+			.item
+				.img-wr
+					margin-left: 2px
+		.item
+			.img-wr
+				height: 100%
+				img
+					width: 118px
+					height: auto
+					border-radius: 3px
+			.txt
+				padding-left: 60px
+				padding-top: 25px
+				.name
+					font-size: 36px
+					font-family: "bebas-neue"
+					color: #fff
+					margin-bottom: 21px
+				p
+					width: 358px
+					line-height: 2
+					font-size: 18px
+					letter-spacing: 0px
+					color: #767676
+		.owl-dots
+			bottom: -107px
+			left: 50%
+			transform: translateX(-50%)
+			position: absolute
+			margin-left: 9px
+
+footer
+	height: 460px
+	background-color: #0e0e0e
+	padding-top: 94px
+	.ft-title
+		font-size: 30px
+		font-family: "bebas-neue"
+		color: #fff
+		margin-bottom: 38px
+		margin-top: -4px
+	.logo
+		letter-spacing: 2.6px
+		margin-bottom: 16px
+		margin-top: 0
+	.menu-wr
+		width: 452px
+		padding-left: 92px
+	.menu-foot
+		display: flex
+		flex-wrap: wrap
+		&__item
+			color: #5e5d5d
+			font-size: 18px
+			text-transform: uppercase
+			display: block
+			padding-bottom: 27px
+			font-family: "bebas-neue"
+			width: 50%
+.bt
+	margin-top: 56px
+	.bt-span
+		font-size: 16px
+		color: #494949
+	.fab
+    margin-left: 17px
+    margin-right: 2px
+    font-size: 16px
+    cursor: pointer
+.form-wr
+	padding-left: 55px
+.input-group
+	margin-top: -3px
+.input-group>.custom-select:not(:last-child), .input-group>.form-control:not(:last-child)
+	border-radius: 0
+	width: 254px
+	padding-top: 4px
+	padding-left: 28px
+.form-control
+	height: 50px
+	font-size: 18px
+	color: #494949
+	background-color: transparent
+	border: 2px solid #2b2b2b
+	width: 254px
+	&:focus
+		color: #fff
+		background-color: transparent
+		border: 2px solid #2b2b2b
+		outline: none
+		box-shadow: 0 0 0 0
+.input-group-text
+	width: 150px
+	border-radius: 0
+	border: 0
+	color: #705142
+	background-color: #b6907e
+	font-size: 18px
+	font-family: "bebas-neue"
+	justify-content: center
+	cursor: pointer
+.input-group-append
+	cursor: pointer
+.modal .form-control
+	display: inline-block
+	height: 38px
+	border-radius: 0
+	border: 1px solid
+	color: #494949
+.modal .btn
+	width: 150px
+	-webkit-border-radius: 0
+	border-radius: 0
+	border: 0
+	color: #705142
+	background-color: #b6907e
+	font-size: 18px
+	font-family: bebas-neue
+	justify-content: center
+	padding-top: 0.5rem
+.modal-content
+	padding: 30px 0
+body.modal-open
+	overflow: auto
+body.modal-open[style]
+	padding-right: 0px !important
+.modal::-webkit-scrollbar 
+	width: 0 !important
+.toggle-mnu
+	display: none
+	position: absolute
+	left: 15px
+	top: 0
+	text-align: center
+	line-height: 48px
+	width: 28px
+	height: 28px
+	margin-top: 0
+
+.toggle-mnu span:after,
+.toggle-mnu span:before 
+	content: ""
+	position: absolute
+	left: 0
+	top: 9px
+
+.toggle-mnu span:after
+	top: 18px
+
+.toggle-mnu span 
+	position: relative
+	display: block
+
+.toggle-mnu span,
+.toggle-mnu span:after,
+.toggle-mnu span:before
+	width: 100%
+	height: 2px
+	background-color: #fff
+	transition: all 0.3s
+	backface-visibility: hidden
+	border-radius: 2px
+
+.toggle-mnu.on span 
+	background-color: transparent
+
+.toggle-mnu.on span:before 
+	transform: rotate(45deg) translate(-1px, 0px)
+
+.toggle-mnu.on span:after 
+	transform: rotate(-45deg) translate(6px, -7px)
+
+.toggle-mnu.on + #menu 
+	opacity: 1
+	visibility: visible
+
+
+@import "media" 
